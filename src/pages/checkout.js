@@ -40,7 +40,7 @@ const Checkout = () => {
                 </div>
 
                 {/* Right */}
-                <div className='flex flex-col bg-white p-10 shadow-md'>
+                <div className={`${items.length>0 ? 'flex flex-col bg-white p-10 shadow-md':'hidden'}`}>
                     {items.length>0 && (
                         <>
                             <h2 className='whitespace-nowrap'>Subtotal
