@@ -13,6 +13,7 @@ module.exports = {
           DEFAULT: "#131921",
         },
       },
+      
     },  
   },
   variants: {
