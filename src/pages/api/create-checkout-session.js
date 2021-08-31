@@ -29,8 +29,8 @@ export default async (req,res)=>{
         },  
         shipping_rates:['shr_1JUcHLSJ1h5qJkX2ZXIoIL8L'],
         
-        success_url:`${process.env.HOST}/success`,
-        cancel_url:`${process.env.HOST}/checkout`,
+        success_url:`${process.env.HOST}/`,
+        cancel_url:`${process.env.HOST}/`,
         metadata:{
             email,
             images:JSON.stringify(items.map(item=>item.image))
