@@ -13,9 +13,7 @@ export default async (req,res)=>{
             product_data:{
                 name:item.title,
                 images:[item.image],
-                metadata:{
-                    primeMembership:item.hasPrime
-                }
+              
             },
         }
     }));
@@ -29,11 +27,12 @@ export default async (req,res)=>{
         },  
         shipping_rates:['shr_1JUcHLSJ1h5qJkX2ZXIoIL8L'],
         
-        success_url:`${process.env.HOST}/`,
-        cancel_url:`${process.env.HOST}/`,
+        success_url:`${process.env.HOST}/success`,
+        cancel_url:`${process.env.HOST}/checkout`,
         metadata:{
             email,
-            images:JSON.stringify(items.map(item=>item.image))
+            images:JSON.stringify(items.map(item=>item.image)),
+            
         }
     });
 
